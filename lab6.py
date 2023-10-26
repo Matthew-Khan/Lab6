@@ -8,6 +8,7 @@ def encode(sequence):
 
 # Caleb Karimov
 def decode(encoded_sequence):
+    encoded_sequence = str(encoded_sequence)
     output = ""
     for number in encoded_sequence:
         add_to_output = int(number)
