@@ -6,12 +6,16 @@ def encode(sequence):
         encoded_sequence += encoded_digit
     return int(encoded_sequence)
 
-#def decode(encoded_sequence):
-#    decoded_sequence = ""
-#    for digit in str(encoded_sequence):
-#       decoded_digit = str((int(digit) - 3) % 10)  # Ensure the result stays a single digit (0-9)
-#        decoded_sequence += decoded_digit
-#    return int(decoded_sequence)
+# Caleb Karimov
+def decode(encoded_sequence):
+    output = ""
+    for number in encoded_sequence:
+        add_to_output = int(number)
+        add_to_output -= 3
+        if add_to_output < 0:
+            add_to_output += 10
+        output += str(add_to_output)
+    return output
 
 def main():
     while True:
